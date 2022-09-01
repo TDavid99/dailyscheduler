@@ -1,10 +1,14 @@
-$("#currentDay").text(moment().format("dddd, MMMM Do, YYYY"));
+ var todayDate = moment().format('dddd,MMMM Do, YYYY');
+$("#currentDay").html(todayDate);
 
-$(".saveBtn").on("click", function() {
+$(document).ready(function() {
+
+$(".saveBtn").on("click", function () {
     var text = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
-    localStorage.setItem(time,text);
+    localStorage.setItem(time, text);
+
 })
 
 function timeTracker() {
@@ -31,7 +35,7 @@ function timeTracker() {
             $(this).addClass("future");
         }
 
-        })
+      })
 
 } 
 
@@ -47,3 +51,4 @@ $("#hour2 .description").val(localStorage.getItem("hour11"));
 
 
 timeTracker();
+})
