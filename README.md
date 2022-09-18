@@ -1,4 +1,3 @@
 # Work Day Scheduler Starter Code
-# Adding variables that are complete with the full function of each prompt 
+#   This workday calendar allows users to add and save task throught out the day. 
 # using the local storage to save the information that is type into the page.
-# 
