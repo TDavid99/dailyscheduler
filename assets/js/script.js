@@ -66,9 +66,48 @@ if (moment().isAfter(moment().hour(16))) {
     $("text-hour-one").addClass("past");
     $("text-hour-two").addClass("past");
     $("text-hour-three").addClass("past");
-    $("text-hour-four").addClass("past");
-
-   }
+    $("text-hour-four").addClass("present");
+    }else if(moment().isAfter(moment().hour(14))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("past");
+    $("text-hour-ten").addClass("past");
+    $("text-hour-eleven").addClass("past");
+    $("text-hour-twelve").addClass("past");
+    $("text-hour-one").addClass("past");
+    $("text-hour-two").addClass("past");
+    $("text-hour-three").addClass("present");
+    $("text-hour-four").addClass("future");
+    }else if(moment().isAfter(moment().hour(13))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("past");
+    $("text-hour-ten").addClass("past");
+    $("text-hour-eleven").addClass("past");
+    $("text-hour-twelve").addClass("past");
+    $("text-hour-one").addClass("past");
+    $("text-hour-two").addClass("present");
+    $("text-hour-three").addClass("future");
+    $("text-hour-four").addClass("future");
+    }else if(moment().isAfter(moment().hour(12))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("past");
+    $("text-hour-ten").addClass("past");
+    $("text-hour-eleven").addClass("past");
+    $("text-hour-twelve").addClass("past");
+    $("text-hour-one").addClass("present");
+    $("text-hour-two").addClass("future");
+    $("text-hour-three").addClass("future");
+    $("text-hour-four").addClass("future");
+    }else if(moment().hour().isAfter(moment().hour(11))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("past");
+    $("text-hour-ten").addClass("past");
+    $("text-hour-eleven").addClass("past");
+    $("text-hour-twelve").addClass("present");
+    $("text-hour-one").addClass("future");
+    $("text-hour-two").addClass("future");
+    $("text-hour-three").addClass("future");
+    $("text-hour-four").addClass("future");
+    }else if ()
 
 
 
