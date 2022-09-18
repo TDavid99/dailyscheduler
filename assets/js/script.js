@@ -3,15 +3,15 @@ $("#currentDay").html(todayDate);
 
 $(document).ready(function () {
     auditEvents();
-    $("#event-hour-eight").val(localStorage.getItem("hour-8"));
-    $("#event-hour-nine").val(localStorage.getItem("hour-9"));
-    $("#event-hour-ten").val(localStorage.getItem("hour-10"));
-    $("#event-hour-eleven").val(localStorage.getItem("hour-11"));
-    $("#event-hour-twelve").val(localStorage.getItem("hour-12"));
-    $("#event-hour-one").val(localStorage.getItem("hour-1"));
-    $("#event-hour-two").val(localStorage.getItem("hour-2"));
-    $("#event-hour-three").val(localStorage.getItem("hour-3"));
-    $("#event-hour-four").val(localStorage.getItem("hour-4"));
+    $("#text-hour-eight").val(localStorage.getItem("hour-8"));
+    $("#text-hour-nine").val(localStorage.getItem("hour-9"));
+    $("#text-hour-ten").val(localStorage.getItem("hour-10"));
+    $("#text-hour-eleven").val(localStorage.getItem("hour-11"));
+    $("#text-hour-twelve").val(localStorage.getItem("hour-12"));
+    $("#text-hour-one").val(localStorage.getItem("hour-1"));
+    $("#text-hour-two").val(localStorage.getItem("hour-2"));
+    $("#text-hour-three").val(localStorage.getItem("hour-3"));
+    $("#text-hour-four").val(localStorage.getItem("hour-4"));
   });
 
 
