@@ -12,43 +12,63 @@ $(document).ready(function () {
     $("#text-hour-two").val(localStorage.getItem("hour-2"));
     $("#text-hour-three").val(localStorage.getItem("hour-3"));
     $("#text-hour-four").val(localStorage.getItem("hour-4"));
-  });
+});
 
 
 function saveText() {
-  hourNineInput = $("#text-hour-eight").val();
-  hourTenInput = $("#text-hour-nine").val();
-  hourElevenInput = $("#text-hour-ten").val();
-  hourTwelveInput = $("#text-hour-eleven").val();
-  hourOneInput = $("#text-hour-twelve").val();
-  hourTwoInput = $("#text-hour-one").val();
-  hourThreeInput = $("#text-hour-two").val();
-  hourFourInput = $("#text-hour-three").val();
-  hourFiveInput = $("#text-hour-four").val();
+    hourEightText = $("#text-hour-eight").val();
+    hourNineText = $("#text-hour-nine").val();
+    hourTenText = $("#text-hour-ten").val();
+    hourElevenText = $("#text-hour-eleven").val();
+    hourTwelveText = $("#text-hour-twelve").val();
+    hourOneText = $("#text-hour-one").val();
+    hourTwoText = $("#text-hour-two").val();
+    hourThreeText = $("#text-hour-three").val();
+    hourFourText = $("#text-hour-four").val();
 
 
-  function storetext() {
-    localStorage.setItem("hour-8", hourNineInput);
-    localStorage.setItem("hour-9", hourTenInput);
-    localStorage.setItem("hour-10", hourElevenInput);
-    localStorage.setItem("hour-11", hourTwelveInput);
-    localStorage.setItem("hour-12", hourOneInput);
-    localStorage.setItem("hour-1", hourTwoInput);
-    localStorage.setItem("hour-2", hourThreeInput);
-    localStorage.setItem("hour-3", hourFourInput);
-    localStorage.setItem("hour-4 ", hourFiveInput);
-  }
-  storetext();
+    function storeText() {
+        localStorage.setItem("hour-8", hourEightText);
+        localStorage.setItem("hour-9", hourNineText);
+        localStorage.setItem("hour-10", hourTenText);
+        localStorage.setItem("hour-11", hourElevenText);
+        localStorage.setItem("hour-12", hourTwelveText);
+        localStorage.setItem("hour-1", hourOneText);
+        localStorage.setItem("hour-2", hourTwoText);
+        localStorage.setItem("hour-3", hourThreeText);
+        localStorage.setItem("hour-4 ", hourFourText);
+    }
+    storeText();
 }
 
 
-$(",saveBtn").on("click",saveText);
+$(",saveBtn").on("click", saveText);
 
 function auditEvents() {
     $(".time-block").removeClass("past present future");
 }
+if (moment().isAfter(moment().hour(16))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("past");
+    $("text-hour-ten").addClass("past");
+    $("text-hour-eleven").addClass("past");
+    $("text-hour-twelve").addClass("past");
+    $("text-hour-one").addClass("past");
+    $("text-hour-two").addClass("past");
+    $("text-hour-three").addClass("past");
+    $("text-hour-four").addClass("past");
+   }else if(moment().isAfter(moment().hour(15))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("past");
+    $("text-hour-ten").addClass("past");
+    $("text-hour-eleven").addClass("past");
+    $("text-hour-twelve").addClass("past");
+    $("text-hour-one").addClass("past");
+    $("text-hour-two").addClass("past");
+    $("text-hour-three").addClass("past");
+    $("text-hour-four").addClass("past");
 
-
+   }
 
 
 
