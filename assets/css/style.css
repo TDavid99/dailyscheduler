@@ -76,8 +76,8 @@ textarea {
   transition: all .3s ease-in-out;
   color:  purple;
 }
-@media screen and (max-width: 768px), screen and (max-width: 575px) {
-  .row {
+/* @media screen and (max-width: 768px), screen and (max-width: 575px) { */
+  /* .row {
     height: auto;
     margin-top: 20px;
   }
@@ -96,4 +96,4 @@ textarea {
     min-height: 85px;
     border: 0;
   }
-}
+} */

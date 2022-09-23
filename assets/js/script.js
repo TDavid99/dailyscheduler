@@ -42,7 +42,7 @@ function saveText() {
 }
 
 
-$(",saveBtn").on("click", saveText);
+$(".saveBtn").on("click", saveText);
 
 function auditEvents() {
     $(".time-block").removeClass("past present future");
@@ -57,7 +57,7 @@ if (moment().isAfter(moment().hour(16))) {
     $("text-hour-two").addClass("past");
     $("text-hour-three").addClass("past");
     $("text-hour-four").addClass("past");
-   }else if(moment().isAfter(moment().hour(15))) {
+} else if (moment().isAfter(moment().hour(15))) {
     $("text-hour-eight").addClass("past");
     $("text-hour-nine").addClass("past");
     $("text-hour-ten").addClass("past");
@@ -67,7 +67,7 @@ if (moment().isAfter(moment().hour(16))) {
     $("text-hour-two").addClass("past");
     $("text-hour-three").addClass("past");
     $("text-hour-four").addClass("present");
-    }else if(moment().isAfter(moment().hour(14))) {
+} else if (moment().isAfter(moment().hour(14))) {
     $("text-hour-eight").addClass("past");
     $("text-hour-nine").addClass("past");
     $("text-hour-ten").addClass("past");
@@ -77,7 +77,7 @@ if (moment().isAfter(moment().hour(16))) {
     $("text-hour-two").addClass("past");
     $("text-hour-three").addClass("present");
     $("text-hour-four").addClass("future");
-    }else if(moment().isAfter(moment().hour(13))) {
+} else if (moment().isAfter(moment().hour(13))) {
     $("text-hour-eight").addClass("past");
     $("text-hour-nine").addClass("past");
     $("text-hour-ten").addClass("past");
@@ -87,7 +87,7 @@ if (moment().isAfter(moment().hour(16))) {
     $("text-hour-two").addClass("present");
     $("text-hour-three").addClass("future");
     $("text-hour-four").addClass("future");
-    }else if(moment().isAfter(moment().hour(12))) {
+} else if (moment().isAfter(moment().hour(12))) {
     $("text-hour-eight").addClass("past");
     $("text-hour-nine").addClass("past");
     $("text-hour-ten").addClass("past");
@@ -97,7 +97,7 @@ if (moment().isAfter(moment().hour(16))) {
     $("text-hour-two").addClass("future");
     $("text-hour-three").addClass("future");
     $("text-hour-four").addClass("future");
-    }else if(moment().hour().isAfter(moment().hour(11))) {
+} else if (moment().isAfter(moment().hour(11))) {
     $("text-hour-eight").addClass("past");
     $("text-hour-nine").addClass("past");
     $("text-hour-ten").addClass("past");
@@ -107,8 +107,49 @@ if (moment().isAfter(moment().hour(16))) {
     $("text-hour-two").addClass("future");
     $("text-hour-three").addClass("future");
     $("text-hour-four").addClass("future");
-    }else if ()
+} else if (moment().isAfter(moment().hour(10))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("past");
+    $("text-hour-ten").addClass("past");
+    $("text-hour-eleven").addClass("present");
+    $("text-hour-twelve").addClass("future");
+    $("text-hour-one").addClass("future");
+    $("text-hour-two").addClass("future");
+    $("text-hour-three").addClass("future");
+    $("text-hour-four").addClass("future");
+} else if (moment().isAfter(moment().hour(9))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("past");
+    $("text-hour-ten").addClass("present");
+    $("text-hour-eleven").addClass("future");
+    $("text-hour-twelve").addClass("future");
+    $("text-hour-one").addClass("future");
+    $("text-hour-two").addClass("future");
+    $("text-hour-three").addClass("future");
+    $("text-hour-four").addClass("future");
+} else if (moment().isAfter(moment().hour(8))) {
+    $("text-hour-eight").addClass("past");
+    $("text-hour-nine").addClass("present");
+    $("text-hour-ten").addClass("future");
+    $("text-hour-eleven").addClass("future");
+    $("text-hour-twelve").addClass("future");
+    $("text-hour-one").addClass("future");
+    $("text-hour-two").addClass("future");
+    $("text-hour-three").addClass("future");
+    $("text-hour-four").addClass("future");
+} else if (moment().isAfter(moment().hour(7))) {
+    $("text-hour-eight").addClass("present");
+    $("text-hour-nine").addClass("future");
+    $("text-hour-ten").addClass("future");
+    $("text-hour-eleven").addClass("future");
+    $("text-hour-twelve").addClass("future");
+    $("text-hour-one").addClass("future");
+    $("text-hour-two").addClass("future");
+    $("text-hour-three").addClass("future");
+    $("text-hour-four").addClass("future");
+}
 
+setInterval(auditEvents, 1000);
 
 
 
